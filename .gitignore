@@ -12,10 +12,6 @@
 .idea/**/dynamic.xml
 .idea/**/uiDesigner.xml
 
-# Gradle - builder czasami wykorzystywany:
-.idea/**/gradle.xml
-.idea/**/libraries
-
 ## Stary format projektu:
 *.iws
 
