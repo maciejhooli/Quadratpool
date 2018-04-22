@@ -36,12 +36,22 @@ public class QuadratPoly {
         this.c = c;
     }
 
-    private int getDelta() {
+    public int getDelta() {
         return getB() * getB() - 4 * getA() * getC();
     }
 
     public int value(int x) {
         return getA() * x ^ 2 + getB() * x + getC();
+    }
+
+    public int sgnDelta(){
+        if(getDelta() == 0){
+            return 0;
+        } else if(getDelta() > 0){
+            return 1;
+        } else {
+            return -1;
+        }
     }
 
     @Override
