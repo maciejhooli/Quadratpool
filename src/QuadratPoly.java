@@ -95,6 +95,20 @@ public class QuadratPoly {
         }
     }
 
+    public boolean isAPositive(){
+        return getA() > 0;
+    }
+
+    public String quadratPolySolutionRange(){
+        StringBuilder sb = new StringBuilder();
+        if ( isAPositive() ){
+            sb.append("[").append(getQ()).append(",").append("+INF").append(")");
+        } else {
+            sb.append("(").append("-INF").append(",").append(getQ()).append("]");
+        }
+        return sb.toString();
+    }
+
     @Override
     public String toString() {
         StringBuilder sb = new StringBuilder();

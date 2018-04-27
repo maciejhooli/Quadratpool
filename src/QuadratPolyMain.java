@@ -32,5 +32,8 @@ public class QuadratPolyMain {
         System.out.println("Wierzchołek p: " + poly.getP());
         System.out.println("Wierzchołek q: " + poly.getQ());
 
+        System.out.println("isPositive: " + poly.isAPositive());
+        System.out.println("Range: " + poly.quadratPolySolutionRange());
+
     }
 }
