@@ -5,7 +5,8 @@ public class QuadratPoly {
     private int delta;
 
 
-    public QuadratPoly(){}
+    public QuadratPoly() {
+    }
 
     public QuadratPoly(int a, int b, int c) {
         setA(a);
@@ -76,6 +77,22 @@ public class QuadratPoly {
             x2 = Double.NaN;
         }
         return x2;
+    }
+
+    public double getP() {
+        if ( sgnDelta() < 0 ) {
+            return Double.NaN;
+        } else {
+            return -1 * getB() / (2 * getA());
+        }
+    }
+
+    public double getQ() {
+        if ( sgnDelta() < 0 ) {
+            return Double.NaN;
+        } else {
+            return (-1) * getDelta() / (4 * getA());
+        }
     }
 
     @Override
