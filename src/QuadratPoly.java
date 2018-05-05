@@ -95,18 +95,32 @@ public class QuadratPoly {
         }
     }
 
-    public boolean isAPositive(){
+    public boolean isAPositive() {
         return getA() > 0;
     }
 
-    public String quadratPolySolutionRange(){
+    public String quadratPolySolutionRange() {
         StringBuilder sb = new StringBuilder();
-        if ( isAPositive() ){
+        if ( isAPositive() ) {
             sb.append("[").append(getQ()).append(",").append("+INF").append(")");
         } else {
             sb.append("(").append("-INF").append(",").append(getQ()).append("]");
         }
         return sb.toString();
+    }
+
+    public double minValue() {
+        if ( isAPositive() ) {
+            return getQ();
+        } else
+            return Double.POSITIVE_INFINITY;
+    }
+
+    public double maxValue() {
+        if ( isAPositive() ) {
+            return Double.NEGATIVE_INFINITY;
+        } else
+            return getQ();
     }
 
     @Override
